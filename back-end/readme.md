@@ -68,3 +68,57 @@
 - 400: Bad Request (Validation errors)
 - 404: Not Found (Invalid email or password)
 - 500: Internal Server Error
+
+## Get User Profile
+**Endpoint:** `/users/profile`
+**Method:** GET
+
+### Headers
+```
+Authorization: Bearer <jwt_token>
+```
+or Token should be present in cookies
+
+### Response
+#### Success (200 OK)
+```json
+{
+  "user": {
+    "fullName": {
+      "firstName": "John",
+      "lastName": "Doe"
+    },
+    "email": "john@example.com",
+    "_id": "user_id"
+  }
+}
+```
+
+#### Error Codes
+- 401: Unauthorized (Invalid or missing token)
+- 404: User not found
+- 500: Internal Server Error
+
+## Logout User
+**Endpoint:** `/users/logout`
+**Method:** GET
+
+### Headers
+```
+Authorization: Bearer <jwt_token>
+```
+or Token should be present in cookies
+
+### Response
+#### Success (200 OK)
+```json
+{
+  "message": "Logout successfully"
+}
+```
+
+#### Error Codes
+- 401: Unauthorized (Invalid or missing token)
+- 500: Internal Server Error
+
+Note: After logout, the token will be blacklisted and can't be used again for authentication.
