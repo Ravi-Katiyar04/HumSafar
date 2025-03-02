@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
-import { createContext, useState } from "react"
-
-export const UserDataContext = createContext()
+import { useState } from "react";
+import { UserDataContext } from "./UserDataContext";
 
 const UserContext = ({children}) => {
     const [user, setUser] = useState({

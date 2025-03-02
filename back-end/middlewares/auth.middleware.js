@@ -1,6 +1,6 @@
 import UserModel from "../models/user.model.js";
 import jwt from 'jsonwebtoken';
-import bcrypt from 'bcrypt';
+// import bcrypt from 'bcrypt';
 import BlacklistToken from '../models/blacklistToken.model.js';
 
 export const authUser= async (req, res, next) => {
