@@ -4,7 +4,6 @@ import { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 const NavbarMenuItems = ({items}) => {
   const [dropdown, setDropdown]= useState(false);
-  console.log(dropdown)
   return (
     
       <li className="relative">

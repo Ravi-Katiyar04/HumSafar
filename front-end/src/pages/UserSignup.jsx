@@ -43,7 +43,6 @@ const UserSignup = () => {
       if (error.response && error.response.status === 409) {
         setMessage(error.response.data.message);
       } else {
-        console.log(error.response.data.errors[0].msg)
         setMessage(error.response.data.errors[0].msg);
       }      
     }

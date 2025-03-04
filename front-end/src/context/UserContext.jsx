@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
-import { UserDataContext } from "./UserDataContext";
+import { useState, createContext } from "react";
+
+export const UserDataContext = createContext();
 
 const UserContext = ({children}) => {
     const [user, setUser] = useState({
@@ -11,13 +12,10 @@ const UserContext = ({children}) => {
         email:''
     })
   return (
-    <div>
-      <UserDataContext.Provider value={[user, setUser]}>
+    <UserDataContext.Provider value={{ user, setUser }}>
         {children}
-      </UserDataContext.Provider>  
-
-    </div>
+    </UserDataContext.Provider>  
   )
 }
 
-export default UserContext
+export default UserContext;
