@@ -56,6 +56,9 @@ const UserLogin = () => {
     <div className="bg-blue-300 w-full h-screen flex items-center justify-center">
       <div className="p-4 shadow-xl shadow-slate-100 w-fit h-fit bg-white border-2 border-gray-300 text-gray-800 rounded-lg flex flex-col justify-center gap-8">
         <h2 className="text-center text-3xl font-serif font-bold" >User Login</h2>
+        {message && (
+          <div className="flex justify-center items-center text-red-700 font-semibold">{message}</div>
+        )}
         <form className="flex flex-col justify-center gap-2" action=""
           onSubmit={(e) => {
             submitHandler(e);
@@ -91,9 +94,7 @@ const UserLogin = () => {
           </div>
           <button className="bg-blue-700 p-2 m-4 text-gray-200 rounded-2xl" type="submit">LogIn</button>
         </form>
-        {message && (
-          <div className="flex justify-center items-center text-red-700 m-2">{message}</div>
-        )}
+        
         <Link to='/captain-login' className='bg-green-950 flex justify-center items-center text-slate-50 p-1 rounded-2xl'>LogIn as Captain</Link>
       </div>
     </div>

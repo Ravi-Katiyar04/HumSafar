@@ -22,7 +22,6 @@ const NavbarMenuItems = ({items}) => {
           )
         }
       </li>
-    // </div>
   )
 }
 

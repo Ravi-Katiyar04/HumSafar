@@ -38,13 +38,10 @@
 
 
 import { FaTrainTram } from "react-icons/fa6";
-import { CgProfile } from "react-icons/cg";
 import { MenuItemData } from "../MenuItemData";
 import NavbarMenuItems from "./NavbarMenuItems";
-import { Link } from 'react-router-dom'
-
+import ProfileView from "./ProfileView";
 const Navbar = () => {
-  const token = localStorage.getItem('token');
   return (
     <>
       <div className="bg-red-500 h-20 w-4/5 m-auto flex items-center">
@@ -64,12 +61,8 @@ const Navbar = () => {
             </nav>
           </div>
 
-
         </div>
-        {token ?
-          <Link to='/profile' className="flex my-10 items-center "><CgProfile size={28} /> Profile</Link>
-          :
-          <Link to='/login' className="flex my-10 items-center "><CgProfile size={28} /> Login/Signup</Link>}
+        <ProfileView />
       </div>
     </>
   )
