@@ -3,7 +3,9 @@ import { FaTrainTram } from "react-icons/fa6";
 import { MenuItemData } from "../MenuItemData";
 import NavbarMenuItems from "./NavbarMenuItems";
 import ProfileView from "./ProfileView";
+
 const Navbar = () => {
+  
   return (
     <>
       <div className="bg-red-500 h-20 w-4/5 m-auto flex items-center">
