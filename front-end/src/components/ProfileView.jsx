@@ -149,9 +149,9 @@ const ProfileView = () => {
         <div className="relative" ref={dropdownRef}>
           <button
             onClick={() => setShowDropdown(!showDropdown)}
-            className="font-semibold flex items-center gap-2 cursor-pointer"
+            className="font-semibold flex items-center cursor-pointer"
           >
-            <CgProfile size={40} className="text-blue-500" /> Hello, {name}
+            <CgProfile size={50} className="text-blue-500" /> Hello, {name}
           </button>
           {showDropdown && (
             <div
